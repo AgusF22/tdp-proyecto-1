@@ -50,6 +50,7 @@ public class SimplePresentationScreen extends JFrame {
 			setIconImage(ImageIO.read(new File("src/images/tdp.png")));
 		} catch (IOException e) {
 			System.out.println("Error al cargar el icono");
+			e.printStackTrace();
 		}
 		
 		init();
