@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.util.Calendar;
 
@@ -47,7 +46,7 @@ public class SimplePresentationScreen extends JFrame {
 		setResizable(false);
 		setContentPane(contentPane);
 		try {
-			setIconImage(ImageIO.read(new File("src/images/tdp.png")));
+			setIconImage(ImageIO.read(getClass().getClassLoader().getResourceAsStream("images/tdp.png")));
 		} catch (IOException e) {
 			System.out.println("Error al cargar el icono");
 			e.printStackTrace();
@@ -144,7 +143,7 @@ public class SimplePresentationScreen extends JFrame {
 		JLabel imageLabel;
 		BufferedImage photo = null;
 		try {
-			photo = ImageIO.read(new File(studentData.getPathPhoto()));
+			photo = ImageIO.read(getClass().getClassLoader().getResourceAsStream(studentData.getPathPhoto()));
 		} catch (IOException e) {
 			System.out.println("Error al cargar la foto del estudiante.");
 			e.printStackTrace();
