@@ -158,7 +158,7 @@ public class SimplePresentationScreen extends JFrame {
 	private void initDateLabel() {
 		Calendar calendar = Calendar.getInstance();
 		StringBuilder sb = new StringBuilder("Esta ventana fue generada el ")
-				.append(calendar.get(Calendar.DAY_OF_MONTH))
+				.append(String.format("%02d", calendar.get(Calendar.DAY_OF_MONTH)))
 				.append("/")
 				.append(String.format("%02d", calendar.get(Calendar.MONTH) + 1))
 				.append("/")
