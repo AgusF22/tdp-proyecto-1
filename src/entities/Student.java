@@ -1,5 +1,8 @@
 package entities;
 
+/**
+ * Models a student.
+ */
 public class Student {
 	
 	private int id;

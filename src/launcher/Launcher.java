@@ -12,7 +12,8 @@ public class Launcher {
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				SimplePresentationScreen frame = new SimplePresentationScreen(new Student(120314, "Ferrante", "Agustin Pedro", "agus_p3@hotmail.com",
-						"https://github.com/AgusF22", null));
+						"https://github.com/AgusF22", "src/images/StudentPhoto.png"));
+				frame.setLocationRelativeTo(null);
 				frame.setVisible(true);
 			}
 		});
